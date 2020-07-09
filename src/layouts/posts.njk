@@ -1,0 +1,10 @@
+---
+layout: base
+---
+
+{%- if image %}
+  <div class="cover" style="background: url('https://ik.imagekit.io/kvn/{{ image }}?tr=h-256,w-1920')"></div>
+{%- endif %}
+<div class="container">
+  {{ content | safe }}
+</div>
