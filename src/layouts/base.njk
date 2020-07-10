@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ title }} - Kevin Putrajaya</title>
+    <title>{{ title | pageTitle }}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <script>
@@ -24,7 +24,7 @@
   <body>
     <div class="container">
       <a class="logo" href="/">
-        {% include 'logo.njk' %}
+        {% include 'logo.svg' %}
         {%- if titleOnHeader %}
           <h1>{{ title }}</h1>
         {%- endif %}
@@ -32,7 +32,7 @@
     </div>
 
     {%- if image %}
-      <div class="cover" style="background-image: url('https://ik.imagekit.io/kvn/{{ image }}?tr=w-1920,h-480')"></div>
+      <div class="cover" style="background-image: url('{{ image | unsplash }}')"></div>
     {%- endif %}
 
     <div class="container">

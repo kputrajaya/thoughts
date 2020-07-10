@@ -30,7 +30,8 @@ module.exports = (eleventyConfig) => {
   });
 
   eleventyConfig.addFilter('slug', (value) => slugify(value, {lower: true, strict: true}));
-
+  eleventyConfig.addFilter('pageTitle', (title) => `${title} - Kevin Putrajaya`);
+  eleventyConfig.addFilter('unsplash', (slug) => `https://ik.imagekit.io/kvn/${slug}?tr=w-1920,h-480`);
   eleventyConfig.addShortcode('year', () => new Date().getFullYear().toString());
 
   return config;
