@@ -75,13 +75,15 @@ blockquote {
   & > svg {
     width: 30px;
     height: 30px;
+    margin: -1px -1px 0 0;
     vertical-align: middle;
   }
 
   & > h1 {
     margin: 0 0 0 15px;
-    font-size: 1.44rem;
+    font-size: 1.2rem;
     line-height: 30px;
+    text-transform: lowercase;
     vertical-align: middle;
     display: inline-block;
   }
