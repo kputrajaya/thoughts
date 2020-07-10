@@ -1,14 +1,24 @@
 ---
-layout: base
+layout: base.njk
 tags: post
 permalink: "/{{ page.date | date: '%Y-%m-%d' }}/{{ title | slug }}/"
 ---
 
+<div class="container">
+  <a class="logo" href="/">
+    {% include 'logo.njk' %}
+  </a>
+</div>
+
 {%- if image %}
   <div class="cover" style="background-image: url('https://ik.imagekit.io/kvn/{{ image }}?tr=w-1920,h-480')"></div>
 {%- endif %}
+
 <div class="container">
-  <h1>{{ title }}</h1>
-  <blockquote>{{ subtitle }}</blockquote>
-  {{ content | safe }}
+  <div class="post">
+    <h1>{{ title }}</h1>
+    <blockquote>{{ subtitle }}</blockquote>
+
+    {{ content | safe }}
+  </div>
 </div>
