@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: "Thoughts"
+titleOnHeader: true
+image: "photo-1499382926300-90a93d2d9990"
+pagination:
+  data: collections.post
+  reverse: true
+  size: 10
+---
+
+<div class="home">
+  {%- for post in pagination.items -%}
+    <a class="card" href="{{ post.url }}">
+      <h2>{{ post.data.title }}</h2>
+      <h3>{{ post.data.subtitle }}</h3>
+    </a>
+  {%- endfor -%}
+
+  <div class="navigation">
+    {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}">&laquo; Previous</a>
+    {% else %}
+      <span>&laquo; Previous</span>
+    {% endif %}
+    &bull;
+    {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}">Next &raquo;</a>
+    {% else %}
+      <span>Next &raquo;</span>
+    {% endif %}
+  </div>
+</div>
