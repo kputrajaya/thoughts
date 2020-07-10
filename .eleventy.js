@@ -1,25 +1,9 @@
 const htmlMin = require('html-minifier');
+const pluginSass = require('eleventy-plugin-sass');
 const slugify = require('slugify');
 
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addFilter('slug', (value) => slugify(value, {lower: true, strict: true}));
-
-  eleventyConfig.addPassthroughCopy('src/assets');
-
-  eleventyConfig.addTransform('htmlMin', (content, outputPath) => (
-    outputPath.endsWith('.html')
-      ? htmlMin.minify(content, {
-        collapseWhitespace: true,
-        minifyJS: true,
-        processScripts: true,
-        useShortDoctype: true
-      })
-      : content
-  ));
-
-  eleventyConfig.setTemplateFormats('md, njk');
-
-  return {
+  const config = {
     dir: {
       input: 'src',
       includes: 'includes',
@@ -28,4 +12,24 @@ module.exports = (eleventyConfig) => {
       output: 'dist'
     }
   };
+
+  eleventyConfig.setTemplateFormats(['ico', 'md', 'njk']);
+
+  eleventyConfig.addTransform('htmlMin', (content, outputPath) => outputPath.endsWith('.html')
+    ? htmlMin.minify(content, {
+      collapseWhitespace: true,
+      minifyJS: true,
+      processScripts: true,
+      useShortDoctype: true
+    })
+    : content
+  );
+
+  eleventyConfig.addPlugin(pluginSass, {
+    watch: config.dir.input + '/**/*.{scss,sass}'
+  });
+
+  eleventyConfig.addFilter('slug', (value) => slugify(value, {lower: true, strict: true}));
+
+  return config;
 };

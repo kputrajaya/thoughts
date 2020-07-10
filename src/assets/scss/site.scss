@@ -70,18 +70,20 @@ blockquote {
   height: 30px;
   border: none;
   display: inline-block;
-}
-.logo > svg {
-  width: 30px;
-  height: 30px;
-  vertical-align: middle;
-}
-.logo > h1 {
-  margin: 0 0 0 15px;
-  font-size: 1.44rem;
-  line-height: 30px;
-  vertical-align: middle;
-  display: inline-block;
+
+  & > svg {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+  }
+
+  & > h1 {
+    margin: 0 0 0 15px;
+    font-size: 1.44rem;
+    line-height: 30px;
+    vertical-align: middle;
+    display: inline-block;
+  }
 }
 
 .cover {
@@ -102,22 +104,24 @@ blockquote {
 .card {
   padding: 15px 0;
   display: block;
-}
-.card > h2 {
-  margin: 0;
-  font-size: 1.2rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.card > h3 {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #888;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
+  & > h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & > h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #888;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .navigation {
@@ -127,19 +131,22 @@ blockquote {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-}
-.navigation > * {
-  width: 80px;
-  margin: 0 7.5px;
-  text-align: left;
-  display: inline-block;
-}
-.navigation > *:first-child {
-  text-align: right;
-}
-.navigation > a {
-  font-weight: bold;
-  border: none;
+
+  & > * {
+    width: 80px;
+    margin: 0 7.5px;
+    text-align: left;
+    display: inline-block;
+  }
+
+  & > *:first-child {
+    text-align: right;
+  }
+
+  & > a {
+    font-weight: bold;
+    border: none;
+  }
 }
 
 .footer {
@@ -147,7 +154,8 @@ blockquote {
   font-size: .833rem;
   text-align: center;
   color: #888;
-}
-.footer a {
-  color: #888;
+
+  & > a {
+    color: #888;
+  }
 }
