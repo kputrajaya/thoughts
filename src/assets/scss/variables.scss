@@ -1,0 +1,42 @@
+@import './utils';
+
+$-font-base: 16px;
+$-font-ratio: 1.2;
+
+$-gap-base: 16px;
+$-gap-ratio: 2;
+
+$gap-x2s: $-gap-base * power($-gap-ratio, -3);
+$gap-xs: $-gap-base * power($-gap-ratio, -2);
+$gap-sm: $-gap-base * power($-gap-ratio, -1);
+$gap-md: $-gap-base;
+$gap-lg: $-gap-base * power($-gap-ratio, 1);
+$gap-xl: $-gap-base * power($-gap-ratio, 2);
+
+$fam-sans: 'Open Sans', sans-serif;
+
+$font-xs: 1rem * power($-font-ratio, -2);
+$font-sm: 1rem * power($-font-ratio, -1);
+$font-md: 1rem;
+$font-lg: 1rem * power($-font-ratio, 1);
+$font-xl: 1rem * power($-font-ratio, 2);
+$font-x2l: 1rem * power($-font-ratio, 3);
+$font-x3l: 1rem * power($-font-ratio, 4);
+
+$weight-normal: 400;
+$weight-bold: 600;
+
+$color-red: #CA3939;
+$color-white: #F5F5F5;
+$color-light: #DDD;
+$color-gray: #888;
+$color-dark: #333;
+
+$line-height: 1.8;
+$word-spacing: .03rem;
+
+$transition-short: 200ms;
+
+$container-max-width: 720px;
+$contact-size: 38px;
+$contact-icon-size: 20px;

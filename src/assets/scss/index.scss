@@ -1,0 +1,165 @@
+@import './variables';
+@import './utils';
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: $-font-base;
+  font-weight: $weight-normal;
+  color: $color-dark;
+  line-height: $line-height;
+  word-spacing: $word-spacing;
+  background: $color-white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 $gap-md;
+  font-weight: $weight-bold;
+  color: $color-red;
+}
+h1 {
+  font-size: $font-x2l;
+}
+h2 {
+  font-size: $font-xl;
+}
+h3 {
+  font-size: $font-lg;
+}
+h4 {
+  font-size: $font-md;
+}
+h5 {
+  font-size: $font-sm;
+}
+h6 {
+  font-size: $font-xs;
+}
+
+p {
+  margin: $gap-lg 0;
+}
+
+a {
+  color: $color-red;
+  text-decoration: none;
+  border-bottom: 1px dotted $color-gray;
+}
+
+strong {
+  font-weight: $weight-bold;
+}
+
+blockquote {
+  margin: $gap-lg 0;
+  padding-left: $gap-md;
+  font-size: $font-lg;
+  color: $color-gray;
+  border-left: $gap-xs solid $color-gray;
+}
+
+.container {
+  max-width: $container-max-width;
+  padding: 0 $gap-md;
+  margin: 0 auto;
+}
+
+.logo {
+  margin: 0 (- $gap-md);
+  padding: $gap-md;
+  height: $gap-lg;
+  border: none;
+  display: inline-block;
+
+  & > svg {
+    width: $gap-lg;
+    height: $gap-lg;
+    vertical-align: middle;
+  }
+
+  & > h1 {
+    margin: 0 0 0 $gap-md;
+    font-size: $font-lg;
+    font-weight: $weight-normal;
+    line-height: $gap-lg;
+    text-transform: lowercase;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+.cover {
+  width: 100%;
+  height: $container-max-width / 3;
+  background-position: center;
+  background-size: cover;
+}
+
+.post {
+  margin: $gap-lg 0 $gap-xl;
+}
+
+.home {
+  margin: 0 0 $gap-lg;
+}
+
+.card {
+  padding: $gap-md 0;
+  display: block;
+
+  & > h2 {
+    margin: 0;
+    font-size: $font-lg;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & > h3 {
+    margin: 0;
+    font-size: $font-md;
+    font-weight: $weight-normal;
+    color: $color-gray;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.navigation {
+  margin: $gap-lg 0 $gap-xl;
+  color: $color-gray;
+  text-align: center;
+  @include no-select;
+
+  & > * {
+    width: 85px;
+    margin: 0 $gap-sm;
+    text-align: left;
+    display: inline-block;
+  }
+
+  & > *:first-child {
+    text-align: right;
+  }
+
+  & > a {
+    font-weight: $weight-bold;
+    border: none;
+  }
+}
+
+.footer {
+  margin: 0 0 $gap-xl;
+  font-size: $font-sm;
+  text-align: center;
+  color: $color-gray;
+
+  & > a {
+    color: $color-gray;
+  }
+}

@@ -3,6 +3,9 @@ const pluginSass = require('eleventy-plugin-sass');
 const slugify = require('slugify');
 
 module.exports = (eleventyConfig) => {
+  const SITE_NAME = 'Thoughts';
+  const SITE_OWNER = 'Kevin Putrajaya';
+
   const config = {
     dir: {
       input: 'src',
@@ -30,8 +33,10 @@ module.exports = (eleventyConfig) => {
   });
 
   eleventyConfig.addFilter('slug', (value) => slugify(value, {lower: true, strict: true}));
-  eleventyConfig.addFilter('pageTitle', (title) => `${title} - Kevin Putrajaya`);
+  eleventyConfig.addFilter('pageTitle', (title) => `${title || SITE_NAME} - ${SITE_OWNER}`);
   eleventyConfig.addFilter('unsplash', (slug) => `https://ik.imagekit.io/kvn/${slug}?tr=w-1920,h-480`);
+
+  eleventyConfig.addShortcode('sitename', () => SITE_NAME);
   eleventyConfig.addShortcode('year', () => new Date().getFullYear().toString());
 
   return config;

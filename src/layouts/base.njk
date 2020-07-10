@@ -18,15 +18,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 
     <link href="/assets/favicon.ico" rel="shortcut icon">
-    <link href="/assets/scss/site.css" rel="stylesheet" />
+    <link href="/assets/scss/index.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
       <a class="logo" href="/">
         {% include 'logo.svg' %}
-        {%- if titleOnHeader %}
-          <h1>{{ title }}</h1>
+        {%- if logotype %}
+          <h1>{% sitename %}</h1>
         {%- endif %}
       </a>
     </div>
