@@ -31,5 +31,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('slug', (value) => slugify(value, {lower: true, strict: true}));
 
+  eleventyConfig.addShortcode('year', () => new Date().getFullYear().toString());
+
   return config;
 };
