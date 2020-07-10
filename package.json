@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/kiloev/thoughts#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "html-minifier": "^4.0.0",
+    "uglify-js": "^3.10.0"
   }
 }

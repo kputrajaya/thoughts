@@ -1,10 +1,9 @@
 ---
-layout: post
-image: "photo-1537522306408-8435f315b2e3"
 title: "Experience or Stuff?"
+subtitle: "Do you need your candles lit? I might be able to help."
+date: 2019-11-10
+image: "photo-1537522306408-8435f315b2e3"
 ---
-
-> Do you need your candles lit? I might be able to help.
 
 Instead of an experience-person, I'm more of a stuff-person. I'm easily tempted to buy nice stuff; sometimes things I don't need but which ownership seems to bring joy—*not* to brag or feel belong in society. Truth time: my latest random desire for stuff ownership is ... Zippo lighters. I mean, I don't even smoke! What do I do with it anyway? Light a candle?
 

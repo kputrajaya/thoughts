@@ -1,10 +1,9 @@
 ---
-layout: post
-image: "photo-1504439158909-5a2f08876082"
 title: "Happy Mother's Day"
+subtitle: "I'm sure this is oversharing."
+date: 2019-12-22
+image: "photo-1504439158909-5a2f08876082"
 ---
-
-> I'm sure this is oversharing.
 
 My mother has been a figure of power in my family. She's the one who defines the rules and plans the activities in our household. She is the lioness in our home, you might say. Naturally, growing up, I wasn't very pleased with all the control she exerted to us—the children. I felt that she was not reasonable at times, rarely able to discuss things clearheadedly. She also tends to overshadow us by being in the front line of interactions and conflicts with the outside world.
 

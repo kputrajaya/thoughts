@@ -1,10 +1,9 @@
 ---
-layout: post
-image: "photo-1505664194779-8beaceb93744"
 title: "The Satisfaction Dilemma"
+subtitle: "To be, or not to be? Both, maybe?"
+date: 2019-10-20
+image: "photo-1505664194779-8beaceb93744"
 ---
-
-> To be, or not to be? Both, maybe?
 
 This week, there was a viral discussion about salary on Twitter. Initially, the original poster asked people to share their salary via DM—not the first time for this kind of sensation to blow up, I know. They then shared the interesting submissions for everyone to see (mostly the ones with unique stories and/or fantastic numbers). Well, of course, this triggered many people.
 

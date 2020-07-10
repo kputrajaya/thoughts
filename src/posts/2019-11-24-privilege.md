@@ -1,10 +1,9 @@
 ---
-layout: post
-image: "photo-1520452112805-c6692c840af0"
 title: "Privilege"
+subtitle: "What is it, anyway?"
+date: 2019-11-24
+image: "photo-1520452112805-c6692c840af0"
 ---
-
-> What is it, anyway?
 
 I don't know how it all started but it looks like the latest social media craze is to judge people and their achievements by their privileges. Well, the scope of the term itself is still a bit unclear, it seems. Some describe it as advantages you earned effortlessly from your family or environment, while others argue that past milestone like being accepted into a good university also counts as a privilege. What seems to be the consensus is that when one achieves something, one's privileges must have played a major role.
 

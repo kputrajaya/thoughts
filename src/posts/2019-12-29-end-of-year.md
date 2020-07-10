@@ -1,10 +1,9 @@
 ---
-layout: post
-image: "photo-1530196606945-81ab3df90d91"
 title: "End of Year"
+subtitle: "Goodbye, old calendar."
+date: 2019-12-29
+image: "photo-1530196606945-81ab3df90d91"
 ---
-
-> Goodbye, old calendar.
 
 Do pessimists say "end of a year" while optimists say "beginning of a new year"? Does it even matter at all? What I know is that the change of year is just how we quantify events and progressions over our lifetime. Time is continuous and our lives are composed of small loops. Without the concept of years or dates, the continuity and routines would've messed with our memory. It's just easier to see time as chunks of years and track them based on just that. In reality, nothing changes instantly in one night except the number you put on dates.
 
