@@ -3,9 +3,14 @@ const pluginSass = require('eleventy-plugin-sass');
 const slugify = require('slugify');
 
 module.exports = (eleventyConfig) => {
-  const SITE_NAME = 'Thoughts';
-  const SITE_OWNER = 'Kevin Putrajaya';
-
+  const constants = {
+    sitename: 'Thoughts',
+    owner: 'Kevin Putrajaya',
+    hostname: 'https://thoughts.kvn.pt',
+    description: 'A blog for personal thoughts, random ideas, and reflections of events.',
+    keywords: 'blog, personal, thoughts, random, ideas, reflections, events, philosophy, story',
+    year: new Date().getFullYear().toString()
+  };
   const config = {
     dir: {
       input: 'src',
@@ -33,11 +38,9 @@ module.exports = (eleventyConfig) => {
   });
 
   eleventyConfig.addFilter('slug', (value) => slugify(value, {lower: true, strict: true}));
-  eleventyConfig.addFilter('pageTitle', (title) => `${title || SITE_NAME} - ${SITE_OWNER}`);
+  eleventyConfig.addFilter('pageTitle', (title) => `${title || constants.sitename} - ${constants.owner}`);
   eleventyConfig.addFilter('unsplash', (slug) => `https://ik.imagekit.io/kvn/${slug}?tr=w-1920,h-480,q-70`);
-
-  eleventyConfig.addShortcode('sitename', () => SITE_NAME);
-  eleventyConfig.addShortcode('year', () => new Date().getFullYear().toString());
+  eleventyConfig.addShortcode('const', (key) => constants[key]);
 
   return config;
 };

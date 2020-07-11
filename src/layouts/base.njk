@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>{{ title | pageTitle }}</title>
+    <meta name="description" content="{% const 'description' %}">
+    <meta name="keywords" content="{% const 'keywords' %}">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <script>
@@ -14,7 +16,7 @@
       ga('send', 'pageview');
     </script>
 
-    <link rel="canonical" href="{{ page.url }}" />
+    <link rel="canonical" href="{% const 'hostname' %}{{ page.url }}" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 
     <link href="/assets/favicon.ico" rel="shortcut icon">
@@ -26,7 +28,7 @@
       <a class="logo" href="/">
         {% include 'logo.svg' %}
         {%- if logotype %}
-          <h1>{% sitename %}</h1>
+          <h1>{% const 'sitename' %}</h1>
         {%- endif %}
       </a>
     </div>
@@ -40,6 +42,6 @@
     </div>
 
     <div class="footer">
-      &copy; {% year %}. <a href="https://github.com/kiloev/thoughts" target="_blank" rel="noreferrer">Source on GitHub</a>.
+      &copy; {% const 'year' %}. <a href="https://github.com/kiloev/thoughts" target="_blank" rel="noreferrer">Source on GitHub</a>.
   </body>
 </html>
