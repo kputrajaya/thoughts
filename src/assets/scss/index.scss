@@ -14,6 +14,11 @@ html, body {
   line-height: $line-height;
   word-spacing: $word-spacing;
   background: $color-white;
+
+  @media(prefers-color-scheme: dark) {
+    color: dark-mode($color-dark);
+    background: dark-mode($color-white);
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,6 +53,10 @@ a {
   color: $color-red;
   text-decoration: none;
   border-bottom: 1px dotted $color-gray;
+
+  @media(prefers-color-scheme: dark) {
+    border-color: dark-mode($color-gray);
+  }
 }
 
 strong {
@@ -60,6 +69,11 @@ blockquote {
   font-size: $font-lg;
   color: $color-gray;
   border-left: $gap-xs solid $color-gray;
+
+  @media(prefers-color-scheme: dark) {
+    color: dark-mode($color-gray);
+    border-color: dark-mode($color-gray);
+  }
 }
 
 .container {
@@ -96,6 +110,10 @@ blockquote {
   height: $container-max-width / 3;
   background-position: center;
   background-size: cover;
+
+  @media(prefers-color-scheme: dark) {
+    opacity: .8;
+  }
 }
 
 .post {
@@ -126,6 +144,10 @@ blockquote {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @media(prefers-color-scheme: dark) {
+      color: dark-mode($color-gray);
+    }
   }
 }
 
@@ -150,6 +172,10 @@ blockquote {
     font-weight: $weight-bold;
     border: none;
   }
+
+  @media(prefers-color-scheme: dark) {
+    color: dark-mode($color-gray);
+  }
 }
 
 .footer {
@@ -160,5 +186,9 @@ blockquote {
 
   & > a {
     color: $color-gray;
+  }
+
+  @media(prefers-color-scheme: dark) {
+    color: dark-mode($color-gray);
   }
 }
