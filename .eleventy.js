@@ -34,7 +34,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addFilter('slug', (value) => slugify(value, {lower: true, strict: true}));
   eleventyConfig.addFilter('pageTitle', (title) => `${title || SITE_NAME} - ${SITE_OWNER}`);
-  eleventyConfig.addFilter('unsplash', (slug) => `https://ik.imagekit.io/kvn/${slug}?tr=w-1920,h-480`);
+  eleventyConfig.addFilter('unsplash', (slug) => `https://ik.imagekit.io/kvn/${slug}?tr=w-1920,h-480,q-70`);
 
   eleventyConfig.addShortcode('sitename', () => SITE_NAME);
   eleventyConfig.addShortcode('year', () => new Date().getFullYear().toString());
