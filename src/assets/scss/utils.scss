@@ -11,7 +11,7 @@
 }
 
 @function dark-mode($color) {
-  @return scale-color(invert($color), $lightness: 5%);
+  @return scale-color(invert($color), $lightness: 10%);
 }
 
 @mixin no-select {
