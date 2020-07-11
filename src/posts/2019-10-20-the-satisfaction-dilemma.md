@@ -5,7 +5,7 @@ date: 2019-10-20
 image: "photo-1505664194779-8beaceb93744"
 ---
 
-This week, there was a viral discussion about salary on Twitter. Initially, the original poster asked people to share their salary via DM—not the first time for this kind of sensation to blow up, I know. They then shared the interesting submissions for everyone to see (mostly the ones with unique stories and/or fantastic numbers). Well, of course, this triggered many people.
+This week, there was a viral discussion about salary on Twitter. Initially, the original poster asked people to share their salary via DM&mdash;not the first time for this kind of sensation to blow up, I know. They then shared the interesting submissions for everyone to see (mostly the ones with unique stories and/or fantastic numbers). Well, of course, this triggered many people.
 
 I have to admit, some submissions were quite spectacular. And after reading all of them, some feelings did spark in me: astonishment, curiosity, competitiveness, and a bit of insecurity. "Am I behind in the game?" I mean come on, IDR 50+ Mio at 23 years old?
 
