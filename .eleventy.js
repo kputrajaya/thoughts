@@ -5,7 +5,8 @@ const slugify = require('slugify');
 module.exports = (eleventyConfig) => {
   const constants = {
     sitename: 'Thoughts',
-    owner: 'Kevin Putrajaya',
+    firstName: 'Kevin',
+    lastName: 'Putrajaya',
     hostname: 'https://thoughts.kvn.pt',
     description: 'A blog for personal thoughts, random ideas, and reflections of events.',
     keywords: 'blog, personal, thoughts, random, ideas, reflections, events, philosophy, story',
@@ -38,7 +39,9 @@ module.exports = (eleventyConfig) => {
   });
 
   eleventyConfig.addFilter('slug', (value) => slugify(value, {lower: true, strict: true}));
-  eleventyConfig.addFilter('pageTitle', (title) => `${title || constants.sitename} - ${constants.owner}`);
+  eleventyConfig.addFilter('pageTitle', (title) => (
+    `${title || constants.sitename} - ${constants.firstName} ${constants.lastName}`
+  ));
   eleventyConfig.addFilter('unsplash', (slug) => `https://ik.imagekit.io/kvn/${slug}?tr=w-1920,h-480,q-70`);
   eleventyConfig.addShortcode('const', (key) => constants[key]);
 

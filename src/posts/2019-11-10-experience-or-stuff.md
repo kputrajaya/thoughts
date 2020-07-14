@@ -5,7 +5,7 @@ date: 2019-11-10
 image: "photo-1537522306408-8435f315b2e3"
 ---
 
-Instead of an experience-person, I'm more of a stuff-person. I'm easily tempted to buy nice stuff; sometimes things I don't need but which ownership seems to bring joy&mdash;*not* to brag or feel belong in society. Truth time: my latest random desire for stuff ownership is ... Zippo lighters. I mean, I don't even smoke! What do I do with it anyway? Light a candle?
+Instead of an experience-person, I'm more of a stuff-person. I'm easily tempted to buy nice stuff; sometimes things I don't need but which ownership seems to bring joy&mdash;*not* to brag or feel belong in society. Truth time: my latest random desire for stuff ownership is &hellip; Zippo lighters. I mean, I don't even smoke! What do I do with it anyway? Light a candle?
 
 Now, I have a question. How do people justify "buying" experience? When you're buying stuff, you're getting something tangible and measurable. You can compare their specs and reviews, or even calculate their potential depreciation cost to judge whether the purchase is logical&mdash;which I sometimes do. You have clearer expectations of how they look, how they function, how they enhance your life, and how they compare to other alternatives (including not buying anything at all). Experience, however, is *way* more abstract.
 
