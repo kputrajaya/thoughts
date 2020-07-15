@@ -15,7 +15,7 @@ html, body {
   word-spacing: $word-spacing;
   background: $color-white;
 
-  @media(prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     color: dark-mode($color-dark);
     background: dark-mode($color-white);
   }
@@ -54,7 +54,7 @@ a {
   text-decoration: none;
   border-bottom: 1px dotted $color-gray;
 
-  @media(prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     border-color: dark-mode($color-gray);
   }
 }
@@ -70,7 +70,7 @@ blockquote {
   color: $color-gray;
   border-left: $gap-xs solid $color-gray;
 
-  @media(prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     color: dark-mode($color-gray);
     border-color: dark-mode($color-gray);
   }
@@ -111,7 +111,7 @@ blockquote {
   background-position: center;
   background-size: cover;
 
-  @media(prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     opacity: .8;
   }
 }
@@ -145,7 +145,7 @@ blockquote {
     overflow: hidden;
     text-overflow: ellipsis;
 
-    @media(prefers-color-scheme: dark) {
+    @media screen and (prefers-color-scheme: dark) {
       color: dark-mode($color-gray);
     }
   }
@@ -173,7 +173,7 @@ blockquote {
     border: none;
   }
 
-  @media(prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     color: dark-mode($color-gray);
   }
 }
@@ -188,7 +188,7 @@ blockquote {
     color: $color-gray;
   }
 
-  @media(prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     color: dark-mode($color-gray);
   }
 }
