@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eslint src && eleventy",
+    "build": "eslint . && eleventy",
     "dev": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,7 +23,10 @@
     "@11ty/eleventy": "^0.11.0",
     "eleventy-plugin-sass": "^1.0.0",
     "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
     "html-minifier": "^4.0.0",
+    "slugify": "^1.4.5",
     "uglify-js": "^3.10.0"
   }
 }

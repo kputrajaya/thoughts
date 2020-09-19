@@ -10,7 +10,7 @@ module.exports = (eleventyConfig) => {
     hostname: 'https://thoughts.kvn.pt',
     description: 'A blog for personal thoughts, random ideas, and reflections of events.',
     keywords: 'blog, personal, thoughts, random, ideas, reflections, events, philosophy, story',
-    year: new Date().getFullYear().toString()
+    year: new Date().getFullYear().toString(),
   };
   const config = {
     dir: {
@@ -18,27 +18,28 @@ module.exports = (eleventyConfig) => {
       includes: 'includes',
       data: 'data',
       layouts: 'layouts',
-      output: 'dist'
-    }
+      output: 'dist',
+    },
   };
 
   eleventyConfig.setTemplateFormats(['ico', 'md', 'njk']);
 
-  eleventyConfig.addTransform('htmlMin', (content, outputPath) => outputPath.endsWith('.html')
-    ? htmlMin.minify(content, {
-      collapseWhitespace: true,
-      minifyJS: true,
-      processScripts: true,
-      useShortDoctype: true
-    })
-    : content
-  );
+  eleventyConfig.addTransform('htmlMin', (content, outputPath) => (
+    outputPath.endsWith('.html')
+      ? htmlMin.minify(content, {
+        collapseWhitespace: true,
+        minifyJS: true,
+        processScripts: true,
+        useShortDoctype: true,
+      })
+      : content
+  ));
 
   eleventyConfig.addPlugin(pluginSass, {
-    watch: config.dir.input + '/**/*.{scss,sass}'
+    watch: `${config.dir.input}/**/*.{scss,sass}`,
   });
 
-  eleventyConfig.addFilter('slug', (value) => slugify(value, {lower: true, strict: true}));
+  eleventyConfig.addFilter('slug', (value) => slugify(value, { lower: true, strict: true }));
   eleventyConfig.addFilter('pageTitle', (title) => (
     `${title || constants.sitename} - ${constants.firstName} ${constants.lastName}`
   ));
