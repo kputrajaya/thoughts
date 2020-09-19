@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
+    "build": "eslint src && eleventy",
     "dev": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "eleventy-plugin-sass": "^1.0.0",
+    "eslint": "^7.9.0",
     "html-minifier": "^4.0.0",
     "uglify-js": "^3.10.0"
   }

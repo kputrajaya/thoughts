@@ -28,6 +28,9 @@
       as="style"
       onload="this.rel='stylesheet'"
     />
+    {%- if image %}
+      <link rel="preload" href="{{ image | unsplash }}" as="image" />
+    {%- endif %}
   </head>
   <body>
     <div class="container">
