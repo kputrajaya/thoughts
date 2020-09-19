@@ -43,7 +43,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('pageTitle', (title) => (
     `${title || constants.sitename} - ${constants.firstName} ${constants.lastName}`
   ));
-  eleventyConfig.addFilter('unsplash', (slug) => `https://atcntscqfp.cloudimg.io/v7/https://images.unsplash.com/${slug}?w=1920&h=360&q=70`);
+  eleventyConfig.addFilter('unsplash', (slug) => `https://atcntscqfp.cloudimg.io/v7/https://images.unsplash.com/${slug}?w=1920&h=480&q=60`);
   eleventyConfig.addShortcode('const', (key) => constants[key]);
 
   return config;
