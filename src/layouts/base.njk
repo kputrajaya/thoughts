@@ -17,7 +17,8 @@
     </script>
 
     <link rel="canonical" href="{% const 'hostname' %}{{ page.url }}" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
     <link href="/assets/favicon.ico" rel="shortcut icon">
     <link href="/assets/scss/index.css" rel="stylesheet" />
@@ -43,5 +44,6 @@
 
     <div class="footer">
       &copy; {% const 'year' %} {% const 'firstName' %}. <a href="https://github.com/kiloev/thoughts" target="_blank" rel="noreferrer">Source on GitHub</a>.
+    </div>
   </body>
 </html>
