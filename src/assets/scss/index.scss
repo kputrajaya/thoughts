@@ -108,10 +108,12 @@ blockquote {
 .cover {
   width: 100%;
   height: $container-max-width / 3;
+  background-color: $color-light;
   background-position: center;
   background-size: cover;
 
   @media screen and (prefers-color-scheme: dark) {
+    background-color: dark-mode($color-light);
     opacity: .8;
   }
 }
