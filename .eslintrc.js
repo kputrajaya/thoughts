@@ -12,10 +12,8 @@ module.exports = {
   },
   rules: {
     'linebreak-style': 0,
-    'import/no-extraneous-dependencies': [
-      'error',
-      { devDependencies: true },
-    ],
+    'operator-linebreak': ['error', 'after'],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
-  ignorePatterns: ['!.eleventy.js'],
+  ignorePatterns: ['dist', '!.eleventy.js'],
 };

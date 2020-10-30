@@ -6,6 +6,7 @@
   "scripts": {
     "build": "eslint . && eleventy",
     "dev": "eleventy --serve",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

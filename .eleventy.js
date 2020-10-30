@@ -33,14 +33,14 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginSass, { watch: `${config.dir.input}/**/*.{scss,sass}` });
 
   eleventyConfig.addTransform('htmlMin', (content, outputPath) => (
-    outputPath.endsWith('.html')
-      ? htmlMin.minify(content, {
+    outputPath.endsWith('.html') ?
+      htmlMin.minify(content, {
         collapseWhitespace: true,
         minifyJS: true,
         processScripts: true,
         useShortDoctype: true,
-      })
-      : content
+      }) :
+      content
   ));
 
   eleventyConfig.on('afterBuild', async () => {
@@ -54,10 +54,11 @@ module.exports = (eleventyConfig) => {
       globPatterns: [`**/*.{${extensions.join(',')}}`],
       runtimeCaching: [
         {
-          urlPattern: ({ url }) => (
-            url.hostname === 'thoughts.kvn.pt'
-            || url.hostname === 'fonts.googleapis.com'
-            || url.hostname === 'atcntscqfp.cloudimg.io'
+          urlPattern: ({ url: { hostname, pathname } }) => (
+            pathname === '/assets/scss/index.css' ||
+            hostname === 'fonts.googleapis.com' ||
+            hostname === 'fonts.gstatic.com' ||
+            hostname === 'atcntscqfp.cloudimg.io'
           ),
           handler: 'StaleWhileRevalidate',
         },
