@@ -1,7 +1,7 @@
 const htmlMin = require('html-minifier');
-const pluginPWA = require('eleventy-plugin-pwa');
 const pluginSass = require('eleventy-plugin-sass');
 const slugify = require('slugify');
+const workbox = require('workbox-build');
 
 module.exports = (eleventyConfig) => {
   const constants = {
@@ -30,7 +30,6 @@ module.exports = (eleventyConfig) => {
   copyConfig[`${config.dir.input}/assets/**/!(*.scss)`] = null; // Keep current structure
   eleventyConfig.addPassthroughCopy(copyConfig);
 
-  eleventyConfig.addPlugin(pluginPWA);
   eleventyConfig.addPlugin(pluginSass, { watch: `${config.dir.input}/**/*.{scss,sass}` });
 
   eleventyConfig.addTransform('htmlMin', (content, outputPath) => (
@@ -43,6 +42,29 @@ module.exports = (eleventyConfig) => {
       })
       : content
   ));
+
+  eleventyConfig.on('afterBuild', async () => {
+    await workbox.generateSW({
+      cacheId: constants.siteName,
+      skipWaiting: true,
+      clientsClaim: true,
+      swDest: `${config.dir.output}/sw.js`,
+      globDirectory: config.dir.output,
+      globPatterns: [
+        '**/*.{html,css,js,mjs,map,jpg,png,gif,webp,ico,svg,woff2,woff,eot,ttf,otf,ttc,json}',
+      ],
+      runtimeCaching: [
+        {
+          urlPattern: /^.*\.(html|jpg|png|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
+          handler: 'StaleWhileRevalidate',
+        },
+        {
+          urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
+          handler: 'StaleWhileRevalidate',
+        },
+      ],
+    });
+  });
 
   eleventyConfig.addFilter('slug', (value) => slugify(value, { lower: true, strict: true }));
   eleventyConfig.addFilter('pageTitle', (title) => `${title || constants.sitename} - ${constants.firstName} ${constants.lastName}`);
