@@ -54,15 +54,11 @@ module.exports = (eleventyConfig) => {
       globPatterns: [`**/*.{${extensions.join(',')}}`],
       runtimeCaching: [
         {
-          urlPattern: new RegExp(`^.*\\.(${extensions.join('|')})$`),
-          handler: 'StaleWhileRevalidate',
-        },
-        {
-          urlPattern: /^https?:\/\/fonts\.googleapis\.com\//,
-          handler: 'StaleWhileRevalidate',
-        },
-        {
-          urlPattern: /^https?:\/\/atcntscqfp.cloudimg.io\//,
+          urlPattern: ({ url }) => (
+            url.hostname === 'fonts.googleapis.com'
+            || url.hostname === 'fonts.gstatic.com'
+            || url.hostname === 'atcntscqfp.cloudimg.io'
+          ),
           handler: 'StaleWhileRevalidate',
         },
       ],
