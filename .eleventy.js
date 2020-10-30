@@ -22,7 +22,14 @@ module.exports = (eleventyConfig) => {
     },
   };
 
-  eleventyConfig.setTemplateFormats(['ico', 'md', 'njk']);
+  eleventyConfig.setTemplateFormats(['md', 'njk']);
+
+  const copyConfig = {};
+  copyConfig[`${config.dir.input}/static`] = '/'; // Copy to root
+  copyConfig[`${config.dir.input}/assets/**/!(*.scss)`] = null; // Keep current structure
+  eleventyConfig.addPassthroughCopy(copyConfig);
+
+  eleventyConfig.addPlugin(pluginSass, { watch: `${config.dir.input}/**/*.{scss,sass}` });
 
   eleventyConfig.addTransform('htmlMin', (content, outputPath) => (
     outputPath.endsWith('.html')
@@ -35,14 +42,8 @@ module.exports = (eleventyConfig) => {
       : content
   ));
 
-  eleventyConfig.addPlugin(pluginSass, {
-    watch: `${config.dir.input}/**/*.{scss,sass}`,
-  });
-
   eleventyConfig.addFilter('slug', (value) => slugify(value, { lower: true, strict: true }));
-  eleventyConfig.addFilter('pageTitle', (title) => (
-    `${title || constants.sitename} - ${constants.firstName} ${constants.lastName}`
-  ));
+  eleventyConfig.addFilter('pageTitle', (title) => `${title || constants.sitename} - ${constants.firstName} ${constants.lastName}`);
   eleventyConfig.addFilter('unsplash', (slug) => `https://atcntscqfp.cloudimg.io/v7/https://images.unsplash.com/${slug}?w=1920&h=480&q=60`);
   eleventyConfig.addShortcode('const', (key) => constants[key]);
 
