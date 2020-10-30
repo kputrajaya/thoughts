@@ -44,14 +44,13 @@ module.exports = (eleventyConfig) => {
   ));
 
   eleventyConfig.on('afterBuild', async () => {
-    const extensions = ['html', 'css', 'js', 'mjs', 'map', 'jpg', 'png', 'gif', 'webp', 'ico', 'svg', 'woff2', 'woff', 'eot', 'ttf', 'otf', 'ttc', 'json'];
     await workbox.generateSW({
       cacheId: constants.siteName,
       skipWaiting: true,
       clientsClaim: true,
       swDest: `${config.dir.output}/sw.js`,
       globDirectory: config.dir.output,
-      globPatterns: [`**/*.{${extensions.join(',')}}`],
+      globPatterns: ['**/*.{html,css,js,mjs,map,jpg,png,gif,webp,ico,svg,woff2,woff,eot,ttf,otf,ttc,json}'],
       runtimeCaching: [
         {
           urlPattern: ({ url: { hostname, pathname } }) => (
