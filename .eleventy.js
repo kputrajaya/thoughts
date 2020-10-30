@@ -55,8 +55,8 @@ module.exports = (eleventyConfig) => {
       runtimeCaching: [
         {
           urlPattern: ({ url }) => (
-            url.hostname === 'fonts.googleapis.com'
-            || url.hostname === 'fonts.gstatic.com'
+            url.hostname === 'thoughts.kvn.pt'
+            || url.hostname === 'fonts.googleapis.com'
             || url.hostname === 'atcntscqfp.cloudimg.io'
           ),
           handler: 'StaleWhileRevalidate',
