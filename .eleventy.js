@@ -55,7 +55,7 @@ module.exports = (eleventyConfig) => {
       ],
       runtimeCaching: [
         {
-          urlPattern: /^.*\.(html|jpg|png|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
+          urlPattern: /^.*\.(html|css|js|mjs|map|jpg|png|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
           handler: 'StaleWhileRevalidate',
         },
         {
