@@ -1,4 +1,5 @@
 const htmlMin = require('html-minifier');
+const pluginPWA = require('eleventy-plugin-pwa');
 const pluginSass = require('eleventy-plugin-sass');
 const slugify = require('slugify');
 
@@ -29,6 +30,7 @@ module.exports = (eleventyConfig) => {
   copyConfig[`${config.dir.input}/assets/**/!(*.scss)`] = null; // Keep current structure
   eleventyConfig.addPassthroughCopy(copyConfig);
 
+  eleventyConfig.addPlugin(pluginPWA);
   eleventyConfig.addPlugin(pluginSass, { watch: `${config.dir.input}/**/*.{scss,sass}` });
 
   eleventyConfig.addTransform('htmlMin', (content, outputPath) => (
