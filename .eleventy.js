@@ -44,22 +44,25 @@ module.exports = (eleventyConfig) => {
   ));
 
   eleventyConfig.on('afterBuild', async () => {
+    const extensions = ['html', 'css', 'js', 'mjs', 'map', 'jpg', 'png', 'gif', 'webp', 'ico', 'svg', 'woff2', 'woff', 'eot', 'ttf', 'otf', 'ttc', 'json'];
     await workbox.generateSW({
       cacheId: constants.siteName,
       skipWaiting: true,
       clientsClaim: true,
       swDest: `${config.dir.output}/sw.js`,
       globDirectory: config.dir.output,
-      globPatterns: [
-        '**/*.{html,css,js,mjs,map,jpg,png,gif,webp,ico,svg,woff2,woff,eot,ttf,otf,ttc,json}',
-      ],
+      globPatterns: [`**/*.{${extensions.join(',')}}`],
       runtimeCaching: [
         {
-          urlPattern: /^.*\.(html|css|js|mjs|map|jpg|png|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
+          urlPattern: new RegExp(`^.*\\.(${extensions.join('|')})$`),
           handler: 'StaleWhileRevalidate',
         },
         {
-          urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
+          urlPattern: /^https?:\/\/fonts\.googleapis\.com\//,
+          handler: 'StaleWhileRevalidate',
+        },
+        {
+          urlPattern: /^https?:\/\/atcntscqfp.cloudimg.io\//,
           handler: 'StaleWhileRevalidate',
         },
       ],
