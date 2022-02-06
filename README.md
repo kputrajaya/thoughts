@@ -1,6 +1,6 @@
 # Thoughts
 
-A generated static place for my thoughts.
+My old blog.
 
 ## Built With
 
